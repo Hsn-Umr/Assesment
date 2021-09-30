@@ -1,0 +1,28 @@
+const AppColor ={
+    darkGray : '#2a2a2a',
+    redDark:'#960000',
+    redLight:'#c50000',
+    gray:"#b4b4b4",
+    grayLight:"#edeaea",
+    green:"#5AD510",
+    yellow:"#ffe800",
+    yellowLight:"#ffe600",
+    blueLight:'#E141FC',
+    blue:"#3a86e9",
+    goldenColor:'#ff8800',
+    yellowOrderColor:"#ffe800",
+    greenLight:'#4CAF50',
+    white:'#fff',
+    black: '#000000',
+    barSelect: '#585858',
+    divider: "#585858",
+    redNormal: "#c80000",
+    grayNormal: '#9E9E9E',
+    greenNormal: '#23b700',
+    grayShade: '#8f8f8f',
+    grayText: '#9b9b9b',
+    redText: '#ff0000',
+    grayDivider: '#f0f2f5',
+    yellowShade: '#FE9B3F'
+}
+export default AppColor
