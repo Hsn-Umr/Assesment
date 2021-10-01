@@ -5,15 +5,15 @@ import Entypo from 'react-native-vector-icons/Entypo'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import Avatar from './Avatar'
-import { widthPercentageToDP } from '../../Theme/HeightWidth'
 
-const Post = ({ sourceUser, userName, time, postDetail, sourcePost, likes, comments }) => {
+const Post = ({ sourceUser, userName, time, postDetail, sourcePost, likes, comments, tags }) => {
     return (
         <View style={{ flex: 1, paddingTop: 15 }}>
             <View style={styles.postHeader}>
                 <View style={styles.row}>
                     <Avatar
                         source={sourceUser}
+                        post
                     />
                     <View style={{ paddingLeft: 10 }}>
                         <Text style={styles.postText}>{userName}</Text>
@@ -47,7 +47,12 @@ const Post = ({ sourceUser, userName, time, postDetail, sourcePost, likes, comme
             <Text style={styles.postDetails}>
                 {postDetail}
             </Text>
-            <Image style={styles.postImage} source={sourcePost} />
+            {tags.map((item, index) => {
+                return <View key={index}>
+                    <Text style={styles.tags}>#{item}</Text>
+                </View>
+            })}
+            <Image style={styles.postImage} source={{ uri: sourcePost }} />
 
             <View>
                 <View style={styles.footerCount}>

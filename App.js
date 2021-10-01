@@ -1,29 +1,31 @@
-//packages
 import React from 'react'
-import { StatusBar, SafeAreaView, ScrollView } from 'react-native'
-// components
-import { HomeTopBar, ToolBar, CreateRoom, Story, NewsFeedPost } from './Src/Components';
-// style
-import { styles } from './Src/Theme/style';
+import { StatusBar, SafeAreaView } from 'react-native'
+import { NavigationContainer } from '@react-navigation/native';
+import AppNavigator from './Src/Navigation/AppNavigation';
+//Redux
+import { configureStore } from "@reduxjs/toolkit";
+import { Provider } from "react-redux";
+import rootReducer from "./Src/Redux/postSlice";
 
-function App() {
+const store = configureStore({
+	reducer: rootReducer
+});
+
+export default function App() {
 	return (
-		<>
+
+		<SafeAreaView style={{ flex: 1 }}>
 			<StatusBar
 				backgroundColor='#FFFFFF'
 				barStyle='dark-content'
 			/>
-			<SafeAreaView style={styles.body}>
-				<ScrollView>
-					<HomeTopBar />
-					<ToolBar />
-					<CreateRoom />
-					<Story />
-					<NewsFeedPost />
-				</ScrollView>
-			</SafeAreaView>
-		</>
+			<Provider store={store}>
+				<NavigationContainer>
+					<AppNavigator />
+				</NavigationContainer>
+			</Provider>
+
+		</SafeAreaView>
+
 	);
 }
-
-export default App;

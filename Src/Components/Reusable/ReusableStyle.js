@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
 
     /// Start User Room ////////
     userImg: {
-        marginRight: wp(4)
+        marginRight: wp(4),
     },
     /// End User Room ////////
 
@@ -63,11 +63,15 @@ const styles = StyleSheet.create({
     },
     storyUser: {
         position: 'absolute',
-        top: hp(6),
-        left: wp(6),
+        top: hp(1.5),
+        left: wp(2),
+        paddingTop: hp(2.8),
+        paddingRight: wp(0.8),
         backgroundColor: AppColor.white,
-        borderRadius: 20,
-        width: wp(2),
+        borderColor: AppColor.blue,
+        borderWidth: wp(4),
+        borderRadius: 50,
+        width: wp(13),
         height: hp(1),
         alignItems: 'center',
         justifyContent: 'center',
@@ -136,6 +140,11 @@ const styles = StyleSheet.create({
         fontSize: 12,
         lineHeight: 16,
         paddingHorizontal: wp(3),
+    },
+    tags: {
+        color: AppColor.blue,
+        fontSize: 14,
+        paddingLeft: 7,
     },
     postImage: {
         marginTop: 9,
@@ -212,6 +221,11 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: AppColor.black,
 
+    },
+    propleBtn: {
+        flexDirection: 'row',
+        position: 'absolute',
+        bottom: hp(2)
     },
     addFriend: {
         width: wp(27),

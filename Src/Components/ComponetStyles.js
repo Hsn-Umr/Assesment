@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     /// Start ToolBar Style  ///////
     toolBarContainer: {
         width: wp(100),
-        height: hp(18),
+        height: hp(16.5),
     },
     row: {
         flexDirection: 'row',
@@ -77,8 +77,8 @@ const styles = StyleSheet.create({
     },
     separator: {
         width: wp(0.1),
-        height: hp(4),
-        marginTop: hp(1),
+        height: hp(3),
+        marginTop: hp(0.5),
         backgroundColor: AppColor.divider
     },
     bottomDivider: {

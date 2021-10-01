@@ -1,31 +1,35 @@
 import React from 'react'
+import { FlatList } from 'react-native'
 import { PeopleYouMayKnow } from '.'
 import images from '../Assets/Images'
 import Post from './Reusable/Post'
 
 
-function NewsFeedPost() {
-	return (<>
-		<Post 
-            sourceUser={images.User1}
-            userName={'Test User'}
-            time={'9PM'}
-            postDetail={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."}
-            sourcePost={images.Post1}
-            likes={'200 likes'}
-            comments={'2k comments'}
-        />
+function NewsFeedPost({ posts }) {
+    console.log('news', posts)
+    return (<>
         <PeopleYouMayKnow />
-        <Post 
-        sourceUser={images.User1}
-        userName={'Test User'}
-        time={'9PM'}
-        postDetail={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."}
-        sourcePost={images.Post2}
-        likes={'200 likes'}
-        comments={'2k comments'}
-    />
-	</>)
+        <FlatList
+            data={posts}
+            keyExtractor={(item, index) => index}
+            renderItem={({ item }) => {
+                //console.log('news', item.owner.picture)
+                let date = new Date(item.publishDate);
+                return (
+                    <Post
+                        sourceUser={item.owner.picture}
+                        userName={item.owner.firstName + ' ' + item.owner.lastName}
+                        time={date.toLocaleString('en-US', { hour: 'numeric', hour12: true })}
+                        postDetail={item.text}
+                        tags={item.tags}
+                        sourcePost={item.image}
+                        likes={item.likes + ' likes'}
+                        comments={'2k comments'}
+                    />
+                );
+            }}
+        />
+    </>)
 }
 
 export { NewsFeedPost }
