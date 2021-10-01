@@ -1,4 +1,5 @@
 import React from 'react'
+import { PeopleYouMayKnow } from '.'
 import images from '../Assets/Images'
 import Post from './Reusable/Post'
 
@@ -14,6 +15,7 @@ function NewsFeedPost() {
             likes={'200 likes'}
             comments={'2k comments'}
         />
+        <PeopleYouMayKnow />
         <Post 
         sourceUser={images.User1}
         userName={'Test User'}

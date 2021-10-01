@@ -9,6 +9,7 @@ import User from './Reusable/User'
 function CreateRoom() {
 	return (
 		<>
+			<Text style={styles.roomHeadingText}>Audio and Video Rooms</Text>
 			<View style={styles.createRoomContainer}>
 				<ScrollView
 					horizontal
@@ -17,14 +18,14 @@ function CreateRoom() {
 					<TouchableOpacity style={styles.room}>
 						<Text style={styles.roomText}>Create Room</Text>
 					</TouchableOpacity>
-                    <User source={images.User2} />
-                    <User source={images.User3} />
-                    <User source={images.User4} />
-                    <User source={images.User5} />
-                    <User source={images.User2} />
-                    <User source={images.User3} />
-                    <User source={images.User4} />
-                    <User source={images.User5} />
+					<User source={images.User2} />
+					<User source={images.User3} />
+					<User source={images.User4} />
+					<User source={images.User5} />
+					<User source={images.User2} />
+					<User source={images.User3} />
+					<User source={images.User4} />
+					<User source={images.User5} />
 
 				</ScrollView>
 			</View>

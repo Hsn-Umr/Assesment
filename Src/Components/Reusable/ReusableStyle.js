@@ -112,21 +112,26 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-        marginTop: 6,
+        marginVertical: 6,
         paddingHorizontal: wp(3),
     },
     row: {
         alignItems: 'center',
-        flexDirection: 'row'
+        flexDirection: 'row',
     },
     postText: {
-        fontSize: 12,
+        fontSize: 13,
         fontWeight: 'bold',
+        bottom: 7
     },
     timeText: {
         fontSize: 9,
-        color: '#747476'
-    }, 
+        color: '#747476',
+        bottom: 7
+    },
+    iconAlign: {
+        bottom: 7
+    },
     postDetails: {
         fontSize: 12,
         lineHeight: 16,
@@ -141,7 +146,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         paddingHorizontal: wp(3),
-        
+        top: 5
     },
     bottomDivider: {
         width: wp(100),
@@ -156,8 +161,9 @@ const styles = StyleSheet.create({
     },
     iconCount: {
         backgroundColor: '#1878f3',
-        width: wp(3),
-        height: hp(3),
+        width: wp(5),
+        height: hp(3.2),
+        top: 3,
         borderRadius: 50,
         alignItems: 'center',
         justifyContent: 'center',
@@ -166,6 +172,7 @@ const styles = StyleSheet.create({
     textCount: {
         fontSize: 11,
         color: '#424040',
+        top: 2
     },
     footerMenu: {
         flexDirection: 'row',
@@ -176,9 +183,71 @@ const styles = StyleSheet.create({
     footermenuText: {
         fontSize: 12,
         color: '#424040'
-    }
+    },
     //// End Post  ////
 
+    /// Start People You May Know ////
+    peopleCardContainer: {
+        width: wp(55),
+        height: hp(54),
+        marginVertical: 10,
+        marginLeft: wp(1),
+        borderWidth: 2,
+        borderColor: AppColor.grayLight,
+        borderTopRightRadius: 12,
+        borderTopLeftRadius: 12
+    },
+    peopleIconImg: {
+        width: wp(55),
+        height: hp(38),
+        borderTopRightRadius: 12,
+        borderTopLeftRadius: 12
+    },
+    peopleFooter: {
+        width: wp(55),
+        marginHorizontal: wp(3)
+    },
+    peopleText: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: AppColor.black,
+
+    },
+    addFriend: {
+        width: wp(27),
+        height: hp(5),
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        borderRadius: 6,
+        backgroundColor: AppColor.blue,
+        marginRight: 12,
+        marginTop: hp(1.5),
+        paddingTop: 4,
+        marginLeft: wp(3)
+    },
+    remove: {
+        width: wp(17),
+        height: hp(5),
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        borderRadius: 6,
+        backgroundColor: AppColor.gray,
+        marginRight: 12,
+        marginTop: hp(1.5),
+        paddingTop: 4,
+        marginRight: wp(3)
+    },
+    btnText: {
+        color: AppColor.white,
+        fontSize: 14,
+        fontWeight: '700'
+    },
+    removeText: {
+        color: AppColor.black,
+        fontSize: 14,
+        fontWeight: '700'
+    }
+    /// End People You May Know ////
 
 });
 

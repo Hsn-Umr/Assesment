@@ -7,9 +7,9 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Avatar from './Avatar'
 import { widthPercentageToDP } from '../../Theme/HeightWidth'
 
-const Post = ({ sourceUser, userName, time, postDetail, sourcePost, likes, comments  }) => {
+const Post = ({ sourceUser, userName, time, postDetail, sourcePost, likes, comments }) => {
     return (
-        <View style={{ flex: 1, paddingVertical: 20 }}>
+        <View style={{ flex: 1, paddingTop: 15 }}>
             <View style={styles.postHeader}>
                 <View style={styles.row}>
                     <Avatar
@@ -23,11 +23,13 @@ const Post = ({ sourceUser, userName, time, postDetail, sourcePost, likes, comme
                                 name={'dot-single'}
                                 size={12}
                                 color='#747476'
+                                style={styles.iconAlign}
                             />
                             <Entypo
                                 name={'globe'}
                                 size={10}
                                 color='#747476'
+                                style={styles.iconAlign}
                             />
                         </View>
                     </View>
@@ -37,6 +39,8 @@ const Post = ({ sourceUser, userName, time, postDetail, sourcePost, likes, comme
                     name={'dots-three-horizontal'}
                     size={15}
                     color='#222121'
+                    onPress={() => { alert('pressed') }}
+                    style={{ bottom: 15 }}
                 />
             </View>
 
@@ -47,7 +51,7 @@ const Post = ({ sourceUser, userName, time, postDetail, sourcePost, likes, comme
 
             <View>
                 <View style={styles.footerCount}>
-                    <View style={styles.row}>
+                    <TouchableOpacity style={styles.row}>
                         <View style={styles.iconCount}>
                             <AntDesign
                                 name={'like1'}
@@ -56,15 +60,17 @@ const Post = ({ sourceUser, userName, time, postDetail, sourcePost, likes, comme
                             />
                         </View>
                         <Text style={styles.textCount}>{likes}</Text>
-                    </View>
-                    <Text style={styles.textCount}>{comments}</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <Text style={styles.textCount}>{comments}</Text>
+                    </TouchableOpacity>
                 </View>
 
                 <View style={styles.separator} />
 
                 <View style={styles.footerMenu}>
-                    <TouchableOpacity style={{flexDirection: 'row'}}>
-                        <View style={{marginRight: 6}}>
+                    <TouchableOpacity style={{ flexDirection: 'row' }}>
+                        <View style={{ marginRight: 6 }}>
                             <AntDesign
                                 name={'like2'}
                                 size={20}
@@ -74,8 +80,8 @@ const Post = ({ sourceUser, userName, time, postDetail, sourcePost, likes, comme
                         <Text style={styles.footerMenuText}>Like</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={{flexDirection: 'row'}}>
-                    <View style={{marginRight: 6}}>
+                    <TouchableOpacity style={{ flexDirection: 'row' }}>
+                        <View style={{ marginRight: 6 }}>
                             <MaterialCommunityIcons
                                 name={'comment-outline'}
                                 size={20}
@@ -85,8 +91,8 @@ const Post = ({ sourceUser, userName, time, postDetail, sourcePost, likes, comme
                         <Text style={styles.footerMenuText}>Comment</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={{flexDirection: 'row'}}>
-                    <View style={{marginRight: 6}}>
+                    <TouchableOpacity style={{ flexDirection: 'row' }}>
+                        <View style={{ marginRight: 6 }}>
                             <MaterialCommunityIcons
                                 name={'share-outline'}
                                 size={20}
