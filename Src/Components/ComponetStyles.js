@@ -124,14 +124,22 @@ const styles = StyleSheet.create({
         width: wp(100),
         height: hp(36),
         flexDirection: 'row',
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: AppColor.white
     },
     /// End Story Style  ///////
 
     ///// Start People May Know //////
     peopleKnowContainer: {
             height: hp(60),
+            backgroundColor: AppColor.white
     },
+    peopleSeeAll: {
+        backgroundColor: AppColor.white,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        paddingVertical: 10,
+    }
     ////// End People May Know /////
 
 });

@@ -1,13 +1,12 @@
 import React from 'react'
-import { FlatList } from 'react-native'
+import { FlatList, View } from 'react-native'
 import { PeopleYouMayKnow } from '.'
-import images from '../Assets/Images'
 import Post from './Reusable/Post'
 
 
 function NewsFeedPost({ posts }) {
     console.log('news', posts)
-    return (<>
+    return (<View style={{backgroundColor: '#fff'}}>
         <PeopleYouMayKnow />
         <FlatList
             data={posts}
@@ -29,7 +28,7 @@ function NewsFeedPost({ posts }) {
                 );
             }}
         />
-    </>)
+    </View>)
 }
 
 export { NewsFeedPost }

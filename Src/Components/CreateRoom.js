@@ -8,7 +8,7 @@ import User from './Reusable/User'
 
 function CreateRoom() {
 	return (
-		<>
+		<View style={{backgroundColor: '#fff'}}>
 			<Text style={styles.roomHeadingText}>Audio and Video Rooms</Text>
 			<View style={styles.createRoomContainer}>
 				<ScrollView
@@ -30,7 +30,7 @@ function CreateRoom() {
 				</ScrollView>
 			</View>
 			<View style={styles.bottomDivider} />
-		</>
+		</View>
 	)
 }
 

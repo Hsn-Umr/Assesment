@@ -9,7 +9,7 @@ import Ionicon from 'react-native-vector-icons/Ionicons'
 import PeopleYouMayKnowCard from './Reusable/PeopleYouMayKnowCard'
 
 function PeopleYouMayKnow() {
-    return (<>
+    return (<View style={{backgroundColor: '#fff'}}>
         <View style={styles.peopleKnowContainer}>
 
             <View style={{ flexDirection: 'row' }}>
@@ -53,7 +53,7 @@ function PeopleYouMayKnow() {
                 />
             </ScrollView>
         </View>
-        <TouchableOpacity style={{ flexDirection: 'row', justifyContent: 'center', paddingVertical: 10 }}>
+        <TouchableOpacity style={styles.peopleSeeAll}>
             <Text>See All</Text>
             <Ionicon
                 name={'chevron-forward'}
@@ -64,7 +64,7 @@ function PeopleYouMayKnow() {
         </TouchableOpacity>
         <View style={styles.bottomDivider} />
 
-    </>)
+    </View>)
 }
 
 export { PeopleYouMayKnow }
